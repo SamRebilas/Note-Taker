@@ -8,7 +8,7 @@ router.get("./notes", (req,res)=>{
 })
 router.post("/notes", (req, res) =>{
     const notes = require("../../db/db.json")
-    req.bodoy.id = uuid.v4();
+    req.body.id = uuid.v4();
     console.log(req.body)
     notes.pish(req.body)
     fs.writeFileSync(
